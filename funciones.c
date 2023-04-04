@@ -20,6 +20,8 @@ void seEncuestra(char frase[], char caracter);
 
 void seEncuestra(int array[], int len_arreglos, int digito_buscar);
 
+float PorcentajePares(int array[], int narreglos);
+
 /*
   Funciones
 */
@@ -111,4 +113,14 @@ void seEncuestra(int array[], int len_arreglos, int digito_buscar){
         }
     }
     printf("El digito a examinar se encuentra %d veces en el arreglo.", veces_num);
+}
+  
+float PorcentajePares(int array[], int narreglos){
+    int cont_pares = 0;
+    for(int cont = 0; cont < narreglos ; cont++){
+        if(array[cont] %2 == 0 ){
+            cont_pares = cont_pares+1;
+        }
+    }
+    return ((float)cont_pares/(float)narreglos)*100;
 }
