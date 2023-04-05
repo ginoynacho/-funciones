@@ -28,6 +28,8 @@ int ContadorTermina0(int array[], int narreglos);
 
 int ContadorNumNegativos(int array[], int narreglos);
 
+void Factorial(int array[], int narreglos);
+
 /*
   Funciones
 */
@@ -159,4 +161,19 @@ int ContadorNumNegativos(int array[], int narreglos){
         }
     }
     return cont_num_neg;
+}
+  
+void Factorial(int array[], int narreglos){
+    int factorial_temp = 1;
+    for(int cont =0; cont<narreglos; cont++){
+        factorial_temp = 1;
+        if(array[cont]==0){
+            array[cont] = 0;
+        }else{
+            for(int cont2 = array[cont]; cont2>0; cont2--){
+                factorial_temp = factorial_temp*cont2;
+            }
+            array[cont] = factorial_temp;
+        }
+    }
 }
