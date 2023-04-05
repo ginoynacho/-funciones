@@ -30,6 +30,8 @@ int ContadorNumNegativos(int array[], int narreglos);
 
 void Factorial(int array[], int narreglos);
 
+void Invertir(float array[], int narreglos);
+
 /*
   Funciones
 */
@@ -175,5 +177,20 @@ void Factorial(int array[], int narreglos){
             }
             array[cont] = factorial_temp;
         }
+    }
+}
+
+void Invertir(float array[], int narreglos){
+    float temp;
+    int ultimo = narreglos-1;
+    float array_invertido[narreglos];
+    for(int cont = 0; cont<narreglos; cont++){
+        temp = array[ultimo];
+        array_invertido[cont] = temp;
+        ultimo = ultimo-1;;
+    }
+    printf("Arreglo invertido:");
+    for(int cont = 0; cont<narreglos; cont++){
+        printf(" %.2f", array_invertido[cont]);
     }
 }
