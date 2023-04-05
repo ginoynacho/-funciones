@@ -26,6 +26,8 @@ float PorcentajeImpares(int array[], int narreglos);
 
 int ContadorTermina0(int array[], int narreglos);
 
+int ContadorNumNegativos(int array[], int narreglos);
+
 /*
   Funciones
 */
@@ -147,4 +149,14 @@ int ContadorTermina0(int array[], int narreglos){
         }
     }
     return cont_termina_0;
+}
+  
+int ContadorNumNegativos(int array[], int narreglos){
+    int cont_num_neg = 0;
+    for(int cont =0; cont<narreglos; cont++){
+        if(array[cont] < 0){
+            cont_num_neg++;
+        }
+    }
+    return cont_num_neg;
 }
