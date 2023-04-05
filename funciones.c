@@ -22,6 +22,8 @@ void seEncuestra(int array[], int len_arreglos, int digito_buscar);
 
 float PorcentajePares(int array[], int narreglos);
 
+float PorcentajeImpares(int array[], int narreglos);
+
 /*
   Funciones
 */
@@ -123,4 +125,14 @@ float PorcentajePares(int array[], int narreglos){
         }
     }
     return ((float)cont_pares/(float)narreglos)*100;
+}
+  
+float PorcentajeImpares(int array[], int narreglos){
+    int cont_impares = 0;
+    for(int cont = 0; cont < narreglos ; cont++){
+        if(array[cont] %2 != 0 ){
+            cont_impares = cont_impares+1;
+        }
+    }
+    return ((float)cont_impares/(float)narreglos)*100;
 }
