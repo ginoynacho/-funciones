@@ -24,6 +24,8 @@ float PorcentajePares(int array[], int narreglos);
 
 float PorcentajeImpares(int array[], int narreglos);
 
+int ContadorTermina0(int array[], int narreglos);
+
 /*
   Funciones
 */
@@ -135,4 +137,14 @@ float PorcentajeImpares(int array[], int narreglos){
         }
     }
     return ((float)cont_impares/(float)narreglos)*100;
+}
+
+int ContadorTermina0(int array[], int narreglos){
+    int cont_termina_0 = 0;
+    for(int cont =0; cont<narreglos; cont++){
+        if(array[cont]%10 == 0){
+            cont_termina_0++;
+        }
+    }
+    return cont_termina_0;
 }
