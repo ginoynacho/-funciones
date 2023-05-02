@@ -46,6 +46,8 @@ void mostrarhastamitad(int num[],int narreglos);
 
 void BusacarMayor(float arreglo_numeros[][5],  int filas);
 
+int Simetrico(float arreglo_numeros[][100],  int filas, int columnas);
+
 /*
   Funciones
 */
@@ -304,4 +306,17 @@ void BusacarMayor(float arreglo_numeros[][5], int filas){
         }
     }
     printf("Numero mayor %.2f", num_mayor);
+}
+
+int Simetrico(float arreglo_numeros[][100], int filas, int columnas){
+    float num_mayor;
+    for(int cont_columnas = 0; cont_columnas < columnas; cont_columnas++){
+        for(int cont_filas = 0; cont_filas<filas; cont_filas++){
+          if(arreglo_numeros[cont_filas][cont_columnas] != arreglo_numeros[cont_columnas][cont_filas]){
+            return 0;
+            }
+          }
+        }
+    return 1;
+
 }
