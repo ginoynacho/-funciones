@@ -44,6 +44,8 @@ void mult3(int num[],int narreglos);
 
 void mostrarhastamitad(int num[],int narreglos);
 
+void BusacarMayor(float arreglo_numeros[][5],  int filas);
+
 /*
   Funciones
 */
@@ -286,4 +288,20 @@ void mostrarhastamitad(int num[],int narreglos){
     for(int cont = 0; cont<mitad; cont++){
         printf("%d ", num[cont]);
     }
+}
+  
+
+void BusacarMayor(float arreglo_numeros[][5], int filas){
+    float num_mayor;
+    for(int cont_columnas = 0; cont_columnas < 5; cont_columnas++){
+        for(int cont_filas = 0; cont_filas<filas; cont_filas++){
+          if(cont_columnas == 0  && cont_filas == 0){
+            num_mayor = arreglo_numeros[cont_filas][cont_columnas];
+          }
+          if(arreglo_numeros[cont_filas][cont_columnas] > num_mayor){
+                num_mayor = arreglo_numeros[cont_filas][cont_columnas];
+          }
+        }
+    }
+    printf("Numero mayor %.2f", num_mayor);
 }
